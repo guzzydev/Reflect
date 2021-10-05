@@ -56,7 +56,7 @@
           //const alert = document.querySelector("#alert-error-https");
           //alert.style.display = "block";
           document
-            .querySelector(".connect")
+            .querySelector("connect")
             .setAttribute("disabled", "disabled");
           return;
         }
@@ -120,13 +120,13 @@
 
         // MetaMask does not give you all accounts, only the selected account
         selectedAccount = accounts[0];
-        $(".connect").text(
+        $("connect").text(
           selectedAccount.toString().substring(0, 4) +
             "..." +
             selectedAccount.toString().substring(selectedAccount.length - 6)
         );
-        $(".connect").attr("disabled", "disabled");
-        $(".connect").attr("style", "pointer:not-allowed");
+        $("connect").attr("disabled", "disabled");
+        $("connect").attr("style", "pointer:not-allowed");
         //const userBalance = await web3.eth.getBalance(selectedAccount);
         //const walletTotal = userBalance.toString().substring(0, 4);
         //$(".wallettotal").text(Number(walletTotal, 10) / 10000);
@@ -170,7 +170,7 @@
         // If any current data is displayed when
         // the user is switching acounts in the wallet
         // immediate hide this data
-        $(".connect").attr("disabled", "disabled");
+        $("connect").attr("disabled", "disabled");
         await fetchAccountData(provider);
       }
 
